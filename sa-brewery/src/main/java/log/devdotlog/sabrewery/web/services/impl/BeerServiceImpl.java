@@ -1,6 +1,7 @@
-package log.devdotlog.sabrewery.web.services;
+package log.devdotlog.sabrewery.web.services.impl;
 
 import log.devdotlog.sabrewery.web.model.BeerDto;
+import log.devdotlog.sabrewery.web.services.BeerService;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;

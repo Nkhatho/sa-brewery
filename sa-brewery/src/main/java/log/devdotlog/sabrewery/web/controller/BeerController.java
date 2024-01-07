@@ -19,7 +19,6 @@ public class BeerController {
     public BeerController(BeerService beerService) {
         this.beerService = beerService;
     }
-
     @GetMapping("/{beerId}")
     public ResponseEntity<BeerDto> getBeer(@PathVariable("beerId") UUID beerId){
         return new ResponseEntity<>(beerService.getBeerById(), HttpStatus.OK);
