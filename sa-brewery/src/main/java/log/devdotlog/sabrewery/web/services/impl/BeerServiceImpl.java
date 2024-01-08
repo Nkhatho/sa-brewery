@@ -2,10 +2,12 @@ package log.devdotlog.sabrewery.web.services.impl;
 
 import log.devdotlog.sabrewery.web.model.BeerDto;
 import log.devdotlog.sabrewery.web.services.BeerService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
     @Override
@@ -25,5 +27,12 @@ public class BeerServiceImpl implements BeerService {
     @Override
     public void updateBeer(UUID beerId, BeerDto beerDto) {
         // todo imp - update beer
+
+        log.debug("Updating a beer ...");
+    }
+
+    @Override
+    public void deleteById(UUID beerId) {
+        log.debug("Deleting a beer ...");
     }
 }
