@@ -30,5 +30,6 @@ public class BeerController {
         headers.add("Location", "/api/v1/beer/".concat(savedDto.getId().toString()));
 
         return new ResponseEntity(headers, HttpStatus.CREATED);
+
     }
 }
