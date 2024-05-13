@@ -1,6 +1,5 @@
 package log.devdotlog.sabrewery.web.controller;
 
-import log.devdotlog.sabrewery.web.model.BeerDto;
 import log.devdotlog.sabrewery.web.model.CustomerDto;
 import log.devdotlog.sabrewery.web.services.CustomerService;
 import org.springframework.http.HttpHeaders;
@@ -21,7 +20,7 @@ public class CustomerController {
     public ResponseEntity<CustomerDto> getCustomerById(@PathVariable("customerId") UUID customerId){
         return new ResponseEntity<>(customerService.getCustomerById(), HttpStatus.OK);
     }
-    @PostMapping
+    @PostMapping({"", "/"})
     public ResponseEntity handlePost(@RequestBody CustomerDto customerDto){
         CustomerDto savedCustomerDto = customerService.saveCustomerDto(customerDto);
 
