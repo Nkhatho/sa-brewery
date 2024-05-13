@@ -50,5 +50,4 @@ public class BeerController {
         beerService.deleteById(beerId);
     }
 
-
 }
